@@ -30,6 +30,6 @@ dependencies {
 
 apply plugin: 'application'
 apply plugin: 'java'
-apply plugin: "war"
+apply plugin: "org.springframework.boot"
 
 mainClassName = 'com.limit.redis.RedisApplication'

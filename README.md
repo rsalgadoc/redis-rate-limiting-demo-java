@@ -57,3 +57,19 @@ cd server
 ```
 
 3. Point your browser to `localhost:5000`.
+
+#### Run Docker
+
+```bash
+cd server
+# Execute the command to build Docker images from a Dockerfile and a context
+docker build -t rsalgadoc/redis-rate-limiting-demo-java .
+
+
+# Execute the command to create and run a new container from an image
+docker run -d --name redis-rate-limiting-demo-java --env-file .env -p 5000:5000 --restart always rsalgadoc/redis-rate-limiting-demo-java
+
+
+```bash
+docker push rsalgadoc/redis-rate-limiting-demo-java
+```
